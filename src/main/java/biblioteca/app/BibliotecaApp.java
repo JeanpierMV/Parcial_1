@@ -21,6 +21,10 @@ public class BibliotecaApp {
         libro2.setAutor(sc.nextLine());
         System.out.print("Número ejemplares: ");
         libro2.setNumEjemplares(Integer.parseInt(sc.nextLine()));
+         System.out.print("Año de publicación: ");
+        libro2.setAnoPublicacion(Integer.parseInt(sc.nextLine()));
+        System.out.print("ISBN: ");
+        libro2.setIsbn(sc.nextLine());
         System.out.print("Número prestados: ");
         libro2.setNumPrestados(Integer.parseInt(sc.nextLine()));
         System.out.println("libro2 creado: " + libro2);
