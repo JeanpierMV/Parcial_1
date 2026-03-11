@@ -5,21 +5,33 @@ public class Libro {
     private String autor;
     private int numEjemplares;
     private int numPrestados;
+    // nuevos atributos sugeridos
+    private int anoPublicacion;
+    private String isbn;
+    private int numReservas; // contador de reservas pendientes
 
     // constructor por defecto
     public Libro() {
-        this("", "", 0, 0);
+        this("", "", 0, 0, 0, "", 0);
     }
 
-    // constructor con parámetros
+    // constructor mínimo con los cuatro campos básicos
     public Libro(String titulo, String autor, int numEjemplares, int numPrestados) {
+        this(titulo, autor, numEjemplares, numPrestados, 0, "", 0);
+    }
+
+    // constructor completo que incluye los atributos adicionales
+    public Libro(String titulo, String autor, int numEjemplares, int numPrestados,
+                 int anoPublicacion, String isbn, int numReservas) {
         this.titulo = titulo;
         this.autor = autor;
         this.numEjemplares = numEjemplares;
         this.numPrestados = numPrestados;
+        this.anoPublicacion = anoPublicacion;
+        this.isbn = isbn;
+        this.numReservas = numReservas;
     }
-
-    // getters y setters
+    // aui los get y los set 
     public String getTitulo() {
         return titulo;
     }
@@ -52,6 +64,30 @@ public class Libro {
         this.numPrestados = numPrestados;
     }
 
+    public int getAnoPublicacion() {
+        return anoPublicacion;
+    }
+
+    public void setAnoPublicacion(int anoPublicacion) {
+        this.anoPublicacion = anoPublicacion;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public int getNumReservas() {
+        return numReservas;
+    }
+
+    public void setNumReservas(int numReservas) {
+        this.numReservas = numReservas;
+    }
+
     // método préstamo
     public boolean prestamo() {
         if (numPrestados < numEjemplares) {
@@ -61,7 +97,16 @@ public class Libro {
         return false;
     }
 
-    // método devolución
+    // método para reservar cuando no hay ejemplares disponibles
+    public boolean reservar() {
+        if (numPrestados >= numEjemplares) {
+            numReservas++;
+            return true;
+        }
+        return false; // si aún hay ejemplares se puede tomar prestado en lugar de reservar
+    }
+
+    // método devolucion
     public boolean devolucion() {
         if (numPrestados > 0) {
             numPrestados--;
@@ -77,6 +122,9 @@ public class Libro {
                 ", autor='" + autor + '\'' +
                 ", numEjemplares=" + numEjemplares +
                 ", numPrestados=" + numPrestados +
+                ", anoPublicacion=" + anoPublicacion +
+                ", isbn='" + isbn + '\'' +
+                ", numReservas=" + numReservas +
                 '}';
     }
 }

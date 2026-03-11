@@ -1,5 +1,5 @@
 package biblioteca.model;
-
+// clase LibroTexto que hereda de Libro con el extends
 public class LibroTexto extends Libro {
     private String curso;
 
@@ -7,7 +7,7 @@ public class LibroTexto extends Libro {
         super();
         this.curso = "";
     }
-
+    // 
     public LibroTexto(String titulo, String autor, int numEjemplares, int numPrestados, String curso) {
         super(titulo, autor, numEjemplares, numPrestados);
         this.curso = curso;

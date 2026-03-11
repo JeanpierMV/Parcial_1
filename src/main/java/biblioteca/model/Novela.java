@@ -2,7 +2,7 @@ package biblioteca.model;
 
 public class Novela extends Libro {
     public enum Tipo {
-        HISTORICA, ROMANTICA, POLICIACA, REALISTA, CIENCIA_FICCION, AVENTURAS
+        Historica, Romantica, Policiaca, Realista, Ciencia_Ficcion, Aventuras
     }
 
     private Tipo tipo;

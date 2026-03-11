@@ -53,3 +53,8 @@ Al ejecutar se solicitarán datos para `libro2` por consola y se mostrarán prue
 
 - Se aplican abstracción, encapsulamiento e herencia según se pide.
 - Clases: `Libro`, `LibroTexto`, `LibroTextoUNIAC`, `Novela`.
+
+### Extensiones propuestas
+- Nuevos atributos en `Libro`: `anoPublicacion`, `isbn` y un contador `numReservas`.
+- Método adicional en `Libro`: `reservar()` para anotar reservas cuando no queden ejemplares disponibles.
+

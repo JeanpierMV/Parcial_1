@@ -7,8 +7,9 @@ public class BibliotecaApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // libro1 using parameter constructor
-        Libro libro1 = new Libro("El principito", "Antoine de Saint-Exupéry", 5, 0);
+        // libro1 usando constructor completo con nuevos atributos
+        Libro libro1 = new Libro("El principito", "Antoine de Saint-Exupéry", 5, 0,
+                1943, "978-0156012195", 0);
         System.out.println("libro1 creado: " + libro1);
 
         // libro2 using default and data from console
@@ -29,7 +30,7 @@ public class BibliotecaApp {
         System.out.println("textoUNIAC: " + uniac);
 
         // Novela
-        Novela novela = new Novela("1984", "George Orwell", 4, 2, Novela.Tipo.CIENCIA_FICCION);
+        Novela novela = new Novela("1984", "George Orwell", 4, 2, Novela.Tipo.Ciencia_Ficcion);
         System.out.println("novela: " + novela);
 
         // probar préstamos y devoluciones
@@ -40,6 +41,7 @@ public class BibliotecaApp {
         System.out.println("Estado libro1: " + libro1);
 
         System.out.println("Intentar devolución sin existencia en libro2: " + libro2.devolucion());
+        System.out.println("Reservar libro2 (cuando no hay disponibles): " + libro2.reservar());
         System.out.println("Intentar préstamo en novela: " + novela.prestamo());
         System.out.println("Estado novela: " + novela);
 
