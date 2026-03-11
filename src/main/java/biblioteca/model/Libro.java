@@ -5,22 +5,21 @@ public class Libro {
     private String autor;
     private int numEjemplares;
     private int numPrestados;
-    // nuevos atributos sugeridos
+   
     private int anoPublicacion;
     private String isbn;
-    private int numReservas; // contador de reservas pendientes
+    private int numReservas; 
 
-    // constructor por defecto
+   
     public Libro() {
         this("", "", 0, 0, 0, "", 0);
     }
 
-    // constructor mínimo con los cuatro campos básicos
+   
     public Libro(String titulo, String autor, int numEjemplares, int numPrestados) {
         this(titulo, autor, numEjemplares, numPrestados, 0, "", 0);
     }
 
-    // constructor completo que incluye los atributos adicionales
     public Libro(String titulo, String autor, int numEjemplares, int numPrestados,
                  int anoPublicacion, String isbn, int numReservas) {
         this.titulo = titulo;
@@ -31,7 +30,7 @@ public class Libro {
         this.isbn = isbn;
         this.numReservas = numReservas;
     }
-    // aui los get y los set 
+
     public String getTitulo() {
         return titulo;
     }
@@ -97,16 +96,16 @@ public class Libro {
         return false;
     }
 
-    // método para reservar cuando no hay ejemplares disponibles
+    
     public boolean reservar() {
         if (numPrestados >= numEjemplares) {
             numReservas++;
             return true;
         }
-        return false; // si aún hay ejemplares se puede tomar prestado en lugar de reservar
+        return false; 
     }
 
-    // método devolucion
+  
     public boolean devolucion() {
         if (numPrestados > 0) {
             numPrestados--;
