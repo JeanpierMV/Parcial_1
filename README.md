@@ -1,8 +1,7 @@
-# Sistema de Gestión de Biblioteca
+Sistema de Gestión de Biblioteca
+en este trabajo implemente los requisitos del ejercico de programacion solicitado par lo del manejo de los libros.
 
-Este proyecto implementa los requisitos del ejercicio de programación orientada a objetos (POO) para manejar libros.
-
-## Diagrama UML de clases
+ Diagrama UML de clases
 
 ```
              +--------------+
@@ -53,8 +52,3 @@ Al ejecutar se solicitarán datos para `libro2` por consola y se mostrarán prue
 
 - Se aplican abstracción, encapsulamiento e herencia según se pide.
 - Clases: `Libro`, `LibroTexto`, `LibroTextoUNIAC`, `Novela`.
-
-### Extensiones propuestas
-- Nuevos atributos en `Libro`: `anoPublicacion`, `isbn` y un contador `numReservas`.
-- Método adicional en `Libro`: `reservar()` para anotar reservas cuando no queden ejemplares disponibles.
-
